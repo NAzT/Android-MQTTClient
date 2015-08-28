@@ -5,7 +5,7 @@
     android:id="@+id/device_control_fragment"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ff3a754e"
+    android:background="#37474F"
     android:weightSum="2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -32,37 +32,31 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-        <ToggleButton
+        <ImageButton
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/button_custom"
-            android:textOn=""
-            android:textOff=""
-            android:button="@drawable/arrow_up"
-            android:gravity="center"
+            android:background="@drawable/btn_arrow"
+            android:src="@drawable/up"
             android:layout_marginRight="1dp"
             android:layout_marginLeft="1dp"
             android:layout_marginBottom="1dp"/>
 
-        <ToggleButton
+        <ImageButton
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/button_custom"
-            android:textOn="ON"
-            android:textOff="4"
-            android:gravity="center"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:textColor="@drawable/button_text_custom"
+            android:background="@drawable/btn_arrow"
+            android:src="@drawable/down"
             android:layout_marginRight="1dp"
             android:layout_marginBottom="1dp"/>
 
