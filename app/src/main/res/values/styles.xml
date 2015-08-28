@@ -3,6 +3,37 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">#302b2b</item>
+        <!--<item name="colorAccent">@color/TextBrown</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:actionBarTabStyle">@style/TabMenu</item>-->
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <!--<item name="colorPrimaryDark">@color/PrimaryDark</item>-->
+    </style>
+
+    <style name="TransparentText">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="WhiteText">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="textBoon">
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="ButtonNoBg">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TabMenu" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <!--<item name="android:background">@drawable/btn_radius_follow</item>-->
     </style>
 
 </resources>

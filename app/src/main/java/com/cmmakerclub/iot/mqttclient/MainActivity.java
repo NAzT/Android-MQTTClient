@@ -16,6 +16,8 @@ import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 
 
 public class MainActivity extends Activity implements MqttCallback {
+    MqttClient  client;
+    MqttConnectOptions  conOpt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +27,15 @@ public class MainActivity extends Activity implements MqttCallback {
         String pass = "test";
 
         try {
-            MqttConnectOptions conOpt = new MqttConnectOptions();
+            conOpt = new MqttConnectOptions();
             boolean clean = true;
             conOpt.setCleanSession(clean);
             conOpt.setPassword(pass.toCharArray());
             conOpt.setUserName(user);
-
 //                    url = protocol + broker + ":" + port;
             String tmpDir = System.getProperty("java.io.tmpdir");
             MqttDefaultFilePersistence dataStore = new MqttDefaultFilePersistence(tmpDir);
-            MqttClient client = new MqttClient("tcp://rabbit.cmmc.ninja:1883", "hello", dataStore);
+            client = new MqttClient("tcp://rabbit.cmmc.ninja:1883", "hello", dataStore);
             client.connect(conOpt);
 //            client.connect();
             Log.d("CLIENT-NAT", "Connected to " + " with client ID " + client.getClientId());
@@ -81,8 +82,7 @@ public class MainActivity extends Activity implements MqttCallback {
 
     @Override
     public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-        Log.d("messageArrvied", String.format("%s : %s", s, new String(mqttMessage.getPayload())));
-
+        Log.d("messageArrvied", String.format("%s : %s", s, new String(mqttMessage.getPayload())));sour
     }
 
     @Override
