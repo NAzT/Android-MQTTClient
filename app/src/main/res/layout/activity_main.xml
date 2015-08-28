@@ -11,43 +11,24 @@
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:layout_weight="1"
-        android:layout_marginBottom="1dp">
-
+        android:layout_weight="1">
         <ToggleButton
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
             android:background="@drawable/button_custom"
             android:textOn="ON"
-            android:textOff="1"
+            android:textOff="OFF"
             android:gravity="center"
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="@drawable/button_text_custom"
             android:layout_marginRight="1dp"
             android:layout_marginLeft="1dp"
-            android:layout_marginTop="1dp"/>
-
-        <ToggleButton
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@drawable/button_custom"
-            android:textOn="ON"
-            android:textOff="2"
-            android:gravity="center"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:textColor="@drawable/button_text_custom"
-            android:layout_marginRight="1dp"
-            android:layout_marginTop="1dp"/>
-
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -62,12 +43,10 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/button_custom"
-            android:textOn="ON"
-            android:textOff="3"
+            android:textOn=""
+            android:textOff=""
+            android:button="@drawable/arrow_up"
             android:gravity="center"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:textColor="@drawable/button_text_custom"
             android:layout_marginRight="1dp"
             android:layout_marginLeft="1dp"
             android:layout_marginBottom="1dp"/>
